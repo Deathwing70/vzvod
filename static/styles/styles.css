@@ -1,0 +1,197 @@
+#map {
+    padding: 0;
+    height: 93vh;
+    width: 99%;
+    margin: 0.5vh;
+    /*border-image: url("../images/border.jpg") 33% round;*/
+}
+
+.map {
+    /*border: 90px solid black;*/
+    /*border-image: url("../images/border.jpg") 33% round;*/
+    padding: 0;
+}
+
+#marker-tooltip {
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.marker-pin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: #c30b82;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+}
+ /*to draw white circle*/
+   .marker-pin::after {
+       content: '';
+       width: 24px;
+       height: 24px;
+       margin: 3px 0 0 3px;
+       background: #fff;
+       position: absolute;
+       border-radius: 50%;
+   }
+
+/*to align icon*/
+   .custom-div-icon i {
+       position: absolute;
+       width: 22px;
+       font-size: 22px;
+       left: 0;
+       right: 0;
+       margin: 10px auto;
+       text-align: center;
+   }
+
+/* Установка общего фона и шрифта */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Главное меню */
+nav {
+    font-family: TriodPostnaja;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #fff; /* здесь добавлено свойство color */
+}
+
+/* Секции страницы */
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Карточки книг */
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.book-card p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.book-card a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Стиль формы */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+form input[type=text],
+form input[type=email],
+form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form input[type=submit] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*Fonts*/
+
+@font-face {
+    /*Triod Postnaja*/
+    font-family: TriodPostnaja;
+    src: url("../fonts/TriodPostnaja.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
